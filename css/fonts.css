@@ -1,0 +1,50 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Lato";
+
+  src: url("../assets/fonts/Lato-Regular/Lato-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Lato";
+
+  src: url("../assets/fonts/Lato-Black/Lato-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Lato";
+
+  src: url("../assets/fonts/Lato-Bold/Lato-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Lato";
+
+  src: url("../assets/fonts/Lato-Light/Lato-Light.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "fontello";
+
+  src: url("../assets/fonts/fontello/fontello.woff2") format("woff2"),
+  url("../assets/fonts/fontello/fontello.svg") format("svg");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "linecons";
+
+  src: url("../assets/fonts/linecons/linecons.woff2") format("woff2"),
+  url("../assets/fonts/fontello/fontello.svg") format("svg");
+}
