@@ -122,3 +122,70 @@ sub {
 
   transition: color 0.1s linear;
 }
+
+/* Section Slider*/
+
+.slider {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.layout-3-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  position: relative;
+
+  cursor: pointer;
+} 
+.arrow__left {
+  position: absolute;
+  top: 47%;
+  right: -57px;
+}
+
+.phone {
+  margin-bottom: 50px;
+}
+.phone__vertical {
+  padding-top: 53px;
+  padding-right: 69px;
+}
+
+.phone__horizontal {
+  padding-bottom: 122px;
+}
+
+.arrow__right {
+  position: absolute;
+  top: 47%;
+  right: 40px;
+
+  transform: rotate(180deg);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.arrow:hover {
+  animation: bounce 1s;
+}
