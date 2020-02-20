@@ -82,7 +82,7 @@ sub {
 .navigation__item {
   position: relative;
 
-  margin-left: 29px;
+  margin-left: 28px;
 }
 .navigation__item:first-child {
   margin-left: 0;
@@ -116,6 +116,8 @@ sub {
 }
 
 .navigation__link {
+  font-weight: 700;
+  font-family: "Lato", Verdana, sans-serif;
   color: #ffffff;
 
   cursor: pointer;
