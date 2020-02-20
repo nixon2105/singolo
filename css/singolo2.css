@@ -59,6 +59,8 @@ a {
 }
 
 .section_colored {
+  max-height: 869px;
+
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
