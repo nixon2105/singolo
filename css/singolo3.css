@@ -237,3 +237,74 @@ input[type="text"]::placeholder {
 
   padding-right: 12px;
 } 
+
+/*FOOTER*/
+.footer {
+  overflow: hidden;
+
+  background: #2d303a;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+  padding-bottom: 16px;
+}
+
+.footer__copyright {
+  padding-left: 43px;
+
+  font-size: 12px;
+  font-family: "Lato", Verdana, sans-serif;
+  color: #666d89;
+  letter-spacing: -0.25px;
+}
+
+.footer__social {
+  display: flex;
+  margin-top: 5px;
+  margin-right: 32px;
+}
+
+.footer__item {
+  width: 32px;
+  height: 32px;
+  margin: 0 8px 0 0;
+
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "fontello";
+  text-align: center;
+  color: #6a718c;
+
+  background: transparent;
+  border: 1px solid #6a718c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer__item:hover {
+  color: #f06c64;
+
+  border: 1px solid #f06c64;
+
+  transition-duration: 0.5s;
+}
+
+.footer__item_tw {
+  font-size: 13px;
+}
+
+.icon-twitter:before {
+  content: "\e801";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-gplus:before {
+  content: "\f30f";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
