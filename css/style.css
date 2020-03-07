@@ -141,7 +141,7 @@ sub {
   position: relative;
 
   cursor: pointer;
-} 
+}
 .arrow__left {
   position: absolute;
   top: 47%;
@@ -149,7 +149,7 @@ sub {
 }
 
 .phone {
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 }
 .phone__vertical {
   padding-top: 53px;
@@ -217,6 +217,7 @@ sub {
   font-weight: 300;
   font-size: 18px;
   font-family: "Lato", Verdana, sans-serif;
+  text-align: justify;
   color: #767e9e;
 }
 
@@ -232,6 +233,7 @@ sub {
   width: 33.33333%;
   margin-bottom: -56px;
   padding: 24px 12px 58px 118px;
+  overflow: hidden;
 }
 
 .services__item_third-column {
@@ -257,7 +259,7 @@ sub {
 }
 
 .services__title {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   font-weight: 900;
   font-size: 16px;
@@ -332,7 +334,7 @@ sub {
   flex-wrap: wrap;
   margin-top: 20px;
   margin-left: 23px;
-  padding-bottom: 47px;
+  padding-bottom: 49px;
 }
 
 .portfolio__item {
@@ -373,13 +375,14 @@ sub {
   font-weight: 300;
   font-size: 18px;
   font-family: "Lato", Verdana, sans-serif;
+  text-align: justify;
   color: #767e9e;
 }
 
 .employee {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 46px;
+  margin-top: 44px;
   margin-left: 40px;
   padding-bottom: 67px;
 }
@@ -387,6 +390,7 @@ sub {
 .employee__item {
   width: 33.3333%;
   margin-left: -7px;
+  overflow: hidden;
 }
 
 .employee__item:first-child {
@@ -394,12 +398,13 @@ sub {
 }
 
 .employee__name {
-  margin-top: 5px;
+  margin-top: 7px;
 
   font-weight: 900;
   font-family: "Lato", Verdana, sans-serif;
   color: #666d89;
   letter-spacing: 0.20px;
+  white-space: nowrap;
 }
 
 
@@ -415,7 +420,7 @@ sub {
 
 .employee__social {
   display: flex;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .social__item {
@@ -487,12 +492,13 @@ sub {
   font-weight: 300;
   font-size: 18px;
   font-family: "Lato", Verdana, sans-serif;
+  text-align: justify;
   color: #ffffff;
 }
 
 .layout-2-column {
   display: flex;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 }
 
 .contact__form {
@@ -535,7 +541,7 @@ input[type="email"]::-ms-input-placeholder {
 }
 input[type="email"]::placeholder {
   color: #f48c8f;
-} 
+}
 
 input[type="text"]::-webkit-input-placeholder {
   color: #f48c8f;
@@ -548,7 +554,7 @@ input[type="text"]::-ms-input-placeholder {
 }
 input[type="text"]::placeholder {
   color: #f48c8f;
-} 
+}
 
 .textarea {
   width: 618px;
@@ -570,7 +576,7 @@ input[type="text"]::placeholder {
   outline: none;
 
   resize: none;
-} 
+}
 
 .submit__btn {
   width: 110px;
@@ -657,17 +663,17 @@ input[type="text"]::placeholder {
   content: "\e802";
 
   padding-right: 12px;
-} 
+}
 .icon-phone:before {
   content: "\e803";
 
   padding-right: 12px;
-} 
+}
 .icon-location:before {
   content: "\e804";
 
   padding-right: 12px;
-} 
+}
 
 
 /*FOOTER*/
