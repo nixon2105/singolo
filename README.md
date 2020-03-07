@@ -1,5 +1,5 @@
 
-# 🚀 Singolo [Demo Showcase](https://loving-perlman-45ac7e.netlify.com/)
+# 🚀 Singolo [Demo Showcase](https://nixon2105.github.io/singolo/)
 
 ## Технические требования
 
