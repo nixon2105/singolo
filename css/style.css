@@ -110,7 +110,9 @@ sub {
 }
 
 
-.navigation li.active a {
+
+
+.navigation__link.active {
   color: #f06c64;
 }
 .navigation__link:hover {
