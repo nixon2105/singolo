@@ -109,9 +109,6 @@ sub {
   display: none;
 }
 
-
-
-
 .navigation__link.active {
   color: #f06c64;
 }
@@ -313,7 +310,12 @@ sub {
   margin-left: 0;
 }
 
-.navigation-portfolio li.active a,
+.navigation-portfolio__link.active {
+  color: #ffffff;
+
+  border: 1px solid #ffffff;
+}
+
 .navigation-portfolio__link:hover {
   color: #ffffff;
 
