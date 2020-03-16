@@ -1,4 +1,5 @@
 
+//navigation
 const navigation = document.querySelector('.navigation');
 navigation.addEventListener('click', (e) => {
     navigation.querySelectorAll('.navigation__link').forEach(el => el.classList.remove('active'));
@@ -9,7 +10,7 @@ navigation.addEventListener('click', (e) => {
 const anchors = document.querySelectorAll('a.navigation__link')
 
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', (e) => {
     e.preventDefault()
     const blockID = anchor.getAttribute('href');
     document.querySelector(blockID).scrollIntoView({
@@ -20,7 +21,7 @@ for (let anchor of anchors) {
 };
 
 
-//Portfolio tags
+//Portfolio tags (active, sort)
 const addTagsClickHandler = () => {
     document.querySelector('.navigation-portfolio').addEventListener('click', (e) => {
         e.preventDefault()
@@ -56,7 +57,6 @@ const sortImages = () => {
 
 addTagsClickHandler();
 
-
 //Portfolio images selected
 const addSelectedImages = () => {
     document.querySelector('.portfolio').addEventListener('click', (e) => {
@@ -81,3 +81,53 @@ const selectClikedImages = (selectedImage) => {
 }
 
 addSelectedImages();
+
+
+//Get a quote
+const form = document.querySelector('.form');
+const nameInput = document.querySelector('.input__name');
+const emailInput = document.querySelector('.input__email');
+const subjectInput = document.querySelector('.input__subject');
+const textarea = document.querySelector('.textarea');
+const submitForm = document.querySelector('.input__submit');
+
+const renderModalWindow = document.querySelector('.modal__wrapper');
+const subjectModalWindow = document.querySelector('.modal__subject');
+const descrModalWindow = document.querySelector('.modal__descr');
+const closeBtnModalWindow = document.querySelector('.modal__closeBtn');
+
+
+submitForm.addEventListener("click", event => {
+    event.preventDefault();
+  
+    if (!nameInput.value) {
+      nameInput.classList.add("invalid");
+    }
+  
+    if (!emailInput.value) {
+      emailInput.classList.add("invalid");
+    }
+  
+    if (nameInput.value && emailInput.value) {
+        renderModalWindow.classList.remove("visually-hidden");
+        subjectModalWindow.innerText = subjectInput.value
+        ? `Тема: ${subjectInput.value}`
+        : "Без темы";
+        descrModalWindow.innerText = textarea.value
+        ? `Описание: ${textarea.value}`
+        : "Без описания";
+    }
+  });
+  
+  closeBtnModalWindow.addEventListener("click", () => {
+    renderModalWindow.classList.add("visually-hidden");
+    form.reset();
+  });
+  
+  nameInput.addEventListener("focus", () => {
+    nameInput.classList.remove("invalid");
+  });
+  
+  emailInput.addEventListener("focus", () => {
+    emailInput.classList.remove("invalid");
+  });

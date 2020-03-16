@@ -177,12 +177,12 @@
             ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column">
                 <div class="contact__form">
-                    <form action="#" method="post">
-                        <input name="name" type="text"  placeholder="Name(Required)"  required>
-                        <input name="email" type="email" placeholder="Email(Required)" required>
-                        <input name="subject" type="text" placeholder="Subject" required>
-                        <textarea name="Detail" class="textarea">Describe your project in detail...</textarea>
-                        <input type="submit" value="submit" name="subscribe" class="submit__btn" />
+                    <form action="#" method="post" class="form">
+                        <input name="name" type="text" class="input input__name" maxlength="30" pattern="[A-Za-zА-яа-я]{1,30}" placeholder="Name(Required)"  required>
+                        <input name="email" type="email" class="input input__email" placeholder="Email(Required)" required>
+                        <input name="subject" type="text" class="input input__subject" placeholder="Subject" required>
+                        <textarea name="Detail" class="textarea" placeholder="Describe your project in detail..."></textarea>
+                        <input type="submit"  class="input input__submit submit__btn" value="submit" name="subscribe" />
                     </form>
                 </div>
                 <div class="contact__info">
@@ -212,6 +212,14 @@
             </div>
         </div>
     </footer>
+    <div class="modal__wrapper visually-hidden">
+        <div class="modal__window">
+          <p class="modal__message">Письмо отправлено</p>
+          <p class="modal__subject"></p>
+          <p class="modal__descr"></p>
+          <button class="modal__closeBtn">OK</button>
+        </div>
+      </div>
     <script src="js/script.js"></script>
 </body>
 </html>

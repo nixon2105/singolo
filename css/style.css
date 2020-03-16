@@ -523,6 +523,11 @@ form {
   flex-direction: column;
 }
 
+.textarea::placeholder {
+  font-family: "Lato", Verdana, sans-serif;
+  color: #f48c8f;
+}
+
 input {
   width: 618px;
   max-width: 618px;
@@ -533,8 +538,6 @@ input {
   font-weight: 400;
   font-size: 12px;
   line-height: 38px;
-  font-family: "Lato", Verdana, sans-serif;
-  color: #f48c8f;
 
   background: #d6564f;
   border: 0;
@@ -757,4 +760,65 @@ input[type="text"]::placeholder {
 }
 .icon-linkedin:before {
   content: "\f0e1";
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-size: 16px;
+
+  background: #411f1f88;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.modal__window {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+
+  text-align: center;
+
+  background-color: #e2f6f8;
+  border-radius: 10px;
+}
+
+.modal__closeBtn {
+  margin: 10px;
+  padding: 13px 21px;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: #3a3d3b;
+
+  background: #6de249;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.invalid {
+  box-shadow: 0 0 2px 2px #ffa600;
+}
+
+.modal__message {
+  margin-bottom: 8px;
+
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.modal__descr {
+  text-align: center;
 }
