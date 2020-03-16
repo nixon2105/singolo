@@ -135,7 +135,7 @@ sub {
   border-bottom: 6px solid #ea676b;
 }
 
-.layout-3-column {
+.slider__container {
   display: flex;
   justify-content: space-between;
 }
@@ -149,6 +149,54 @@ sub {
   position: absolute;
   top: 47%;
   right: -57px;
+}
+
+.display__vertical {
+  position: absolute;
+
+  display: none;
+  width: 190px;
+  height: 334px;
+  margin-top: 117px;
+  margin-left: 124px;
+
+  background-color: black;
+  border-radius: 4px;
+}
+
+.display__horizontal {
+  position: absolute;
+
+  display: none;
+  width: 335px;
+  height: 190px;
+  margin-top: 187px;
+  margin-left: 483px;
+
+  background-color: black;
+  border-radius: 4px;
+}
+
+.btn-iphone-vertical {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+  margin-top: 460px;
+  margin-left: 86px;
+
+  border-radius: 50%;
+}
+
+.btn-iphone-horizontal {
+  position: absolute;
+
+  width: 45px;
+  height: 45px;
+  margin-top: 258px;
+  margin-left: 321px;
+
+  border-radius: 50%;
 }
 
 .phone {

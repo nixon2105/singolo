@@ -21,6 +21,25 @@ for (let anchor of anchors) {
 };
 
 
+// Screen iphone off
+
+const iphoneVertical = document.querySelector(".btn-iphone-vertical");
+const iphoneHorizontal = document.querySelector(".btn-iphone-horizontal");
+const offDisplayVertical = document.querySelector(".display__vertical");
+const offDisplayHorizontal = document.querySelector(".display__horizontal");
+let screenoffVertical = false;
+let screenoffHorizontal = false;
+
+iphoneVertical.addEventListener('click', () => {
+    screenoffVertical = !screenoffVertical;
+    screenoffVertical ? offDisplayVertical.style.display = "block" : offDisplayVertical.style.display = "none";
+});
+
+iphoneHorizontal.addEventListener('click', () => {
+    screenoffHorizontal = !screenoffHorizontal;
+    screenoffHorizontal ? offDisplayHorizontal.style.display = "block" : offDisplayHorizontal.style.display = "none";
+});
+
 //Portfolio tags (active, sort)
 const addTagsClickHandler = () => {
     document.querySelector('.navigation-portfolio').addEventListener('click', (e) => {
@@ -97,8 +116,8 @@ const descrModalWindow = document.querySelector('.modal__descr');
 const closeBtnModalWindow = document.querySelector('.modal__closeBtn');
 
 
-submitForm.addEventListener("click", event => {
-    event.preventDefault();
+submitForm.addEventListener("click", e => {
+    e.preventDefault();
   
     if (!nameInput.value) {
       nameInput.classList.add("invalid");
@@ -131,3 +150,4 @@ submitForm.addEventListener("click", event => {
   emailInput.addEventListener("focus", () => {
     emailInput.classList.remove("invalid");
   });
+
