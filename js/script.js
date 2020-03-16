@@ -28,6 +28,7 @@ const addTagsClickHandler = () => {
             let clickedTag = e.target;
             removeActiveTags();
             selectClikedTag(clickedTag);
+            sortImages();
         }
     })
 }
@@ -43,6 +44,15 @@ const removeActiveTags = () => {
 const selectClikedTag = (clickedTag) => {
     clickedTag.classList.add('active');
 }
+
+
+const sortImages = () => {
+    let portfolioImg = document.querySelector('.portfolio');
+    let images = portfolioImg.querySelectorAll('.portfolio__item')
+    let newPlaceImages= [...images].sort((a,b) => Math.random() - 0.5);
+    portfolioImg.append(...newPlaceImages);
+}
+
 
 addTagsClickHandler();
 
