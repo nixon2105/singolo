@@ -357,6 +357,10 @@ sub {
   transition-duration: 0.5s;
 }
 
+.portfolio__img--selected {
+  border: 5px solid  #f06c64;
+}
+
 /*Section ABOUT US*/
 
 .about {
