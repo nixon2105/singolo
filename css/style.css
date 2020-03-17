@@ -406,7 +406,7 @@ sub {
 }
 
 .portfolio__img--selected {
-  border: 5px solid  #f06c64;
+  box-shadow: rgb(240,108,100) 0 0 0 5px;
 }
 
 /*Section ABOUT US*/
