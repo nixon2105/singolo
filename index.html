@@ -13,34 +13,33 @@
         <div class="wrapper wrapper__header ">
             <h1><a href="#" class="header__logo">singolo<sub>*</sub></a></h1>
             <nav class="header__navigation">
-                <ul class="navigation">
-                    <li class="navigation__item"><a href="#home" class="navigation__link active">home</a></li>
-                    <li class="navigation__item"><a href="#services" class="navigation__link">services</a></li>
-                    <li class="navigation__item"><a href="#portfolio" class="navigation__link">portfolio</a></li>
-                    <li class="navigation__item"><a href="#about" class="navigation__link" >about</a></li>
-                    <li class="navigation__item"><a href="#contact" class="navigation__link">contact</a></li>
+                <ul class="navigation" id="nav">
+                    <li class="navigation__item" id="home-link"><a href="#home" class="navigation__link active">home</a></li>
+                    <li class="navigation__item" id="services-link"><a href="#services" class="navigation__link">services</a></li>
+                    <li class="navigation__item" id="portfolio-link"><a href="#portfolio" class="navigation__link">portfolio</a></li>
+                    <li class="navigation__item" id="about-link"><a href="#about" class="navigation__link" >about</a></li>
+                    <li class="navigation__item" id="contact-link"><a href="#contact" class="navigation__link">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slider">
+    <section class="slider slider__red">
         <a class="anch" id="home"></a>
         <div class="wrapper">
-            <div class="slider__container">
+            <div class="slider__arrow">
+                <img src="assets/img/slider/arrow.png" class="arrow__left arrow" alt="arrow">
+                <img src="assets/img/slider/arrow.png" class="arrow__right arrow" alt="arrow">
+            </div>
+            <div class="slider__item slider__item--active">
                 <div class="display__vertical"></div>
                 <div class="display__horizontal"></div>
-                <div class="arrow">
-                    <img src="assets/img/slider/arrow.png" class="arrow__left" alt="arrow">
-                </div>
-                <div class="phone">
-                    <div class="btn-iphone-vertical"></div>
-                    <div class="btn-iphone-horizontal"></div>
-                    <img src="assets/img/slider/iphone vertical.png" class="phone__vertical" alt="phone">
-                    <img src="assets/img/slider/iphone gorizontal.png" class = "phone__horizontal" alt="phone">
-                </div>
-                <div class="arrow">
-                    <img src="assets/img/slider/arrow.png" class="arrow__right" alt="arrow">
-                </div>
+                <div class="btn-iphone-vertical"></div>
+                <div class="btn-iphone-horizontal"></div>
+                <img src="assets/img/slider/iphone vertical.png" class="iphone__vertical" alt="phone">
+                <img src="assets/img/slider/iphone gorizontal.png" class = "iphone__horizontal" alt="phone">
+            </div>
+            <div class="slider__item">
+                <img src="assets/img/slider/slide2.png" class="iphone__slide-two" alt="phone">
             </div>
         </div>
     </section>

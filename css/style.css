@@ -144,34 +144,132 @@ sub {
 /* Section Slider*/
 
 .slider {
-  background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
+  overflow: hidden;
 }
 
-.slider__container {
-  display: flex;
-  justify-content: space-between;
+.slider__red {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+
+  transition: 1.2s;
+}
+
+.slider__blue {
+  background-color: #648bf0;
+  border-bottom: 6px solid #5a84f0;
+
+  transition: 1.2s;
+}
+
+.slider__arrow {
+  position: relative;
+
+  height: 594px;
 }
 
 .arrow {
-  position: relative;
+  position: absolute;
+  top: 281px;
+  z-index: 15;
+
+  width: 16px;
+  height: 27px;
 
   cursor: pointer;
+
+  transition: 1s;
 }
+
+
 .arrow__left {
+  left: 42px;
+}
+
+.arrow__right {
+  right: 40px;
+
+  transform: rotate(180deg);
+}
+
+.slider__item {
+  position: relative;
+
+  display: none;
+
+  animation: 1s ease-in-out;
+}
+
+.slider__item--active,
+.next__slide {
+  display: block;
+}
+
+.leftward {
+  animation-name: left;
+}
+
+.from__right {
+  animation-name: right;
+}
+
+.rightwards {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from__left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -150%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 150%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.iphone__vertical {
   position: absolute;
-  top: 47%;
-  right: -57px;
+  right: 668px;
+  bottom: 58px;
+  z-index: 1;
+}
+
+.iphone__horizontal {
+  position: absolute;
+  right: 111px;
+  bottom: 181px;
+  z-index: 1;
+}
+
+.iphone__slide-two {
+  position: absolute;
+  bottom: 20px;
+  left: 248px;
+  z-index: 3;
 }
 
 .display__vertical {
   position: absolute;
+  top: -477px;
+  left: 125px;
+  z-index: 10;
 
   display: none;
   width: 190px;
   height: 334px;
-  margin-top: 117px;
-  margin-left: 124px;
 
   background-color: black;
   border-radius: 4px;
@@ -179,12 +277,13 @@ sub {
 
 .display__horizontal {
   position: absolute;
+  top: -407px;
+  left: 484px;
+  z-index: 10;
 
   display: none;
   width: 335px;
   height: 190px;
-  margin-top: 187px;
-  margin-left: 483px;
 
   background-color: black;
   border-radius: 4px;
@@ -192,69 +291,30 @@ sub {
 
 .btn-iphone-vertical {
   position: absolute;
+  top: -135px;
+  left: 197px;
+  z-index: 10;
 
   width: 45px;
   height: 45px;
-  margin-top: 460px;
-  margin-left: 86px;
 
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .btn-iphone-horizontal {
   position: absolute;
+  top: -336px;
+  left: 433px;
+  z-index: 10;
 
   width: 45px;
   height: 45px;
-  margin-top: 258px;
-  margin-left: 321px;
 
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.phone {
-  margin-bottom: 51px;
-}
-.phone__vertical {
-  padding-top: 53px;
-  padding-right: 69px;
-}
-
-.phone__horizontal {
-  padding-bottom: 122px;
-}
-
-.arrow__right {
-  position: absolute;
-  top: 47%;
-  right: 40px;
-
-  transform: rotate(180deg);
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  60%,
-  100% {
-    transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  80% {
-    transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
-.arrow:hover {
-  animation: bounce 1s;
-}
 
 /* Section SERVICES */
 .section {

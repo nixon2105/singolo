@@ -21,6 +21,67 @@ for (let anchor of anchors) {
 };
 
 
+//slider
+
+const sliderImages = document.querySelectorAll('.slider__item');
+const sliderBackground = document.querySelector('.slider');
+const arrowLeft = document.querySelector('.arrow__left');
+const arrowRight = document.querySelector('.arrow__right');
+let current = 0;
+let isEnabled = true;
+
+
+const changeCurrentSlide = (n) => {
+    current = (n + sliderImages.length) % sliderImages.length;
+}
+
+const hideSlide = (direction) => {
+    isEnabled = false;
+	sliderImages[current].classList.add(direction);
+	sliderImages[current].addEventListener('animationend', (e) => {
+        target = e.target;
+        target.classList.remove('slider__item--active', direction);
+	});
+}
+
+const showSlide = (direction) => {
+    sliderImages[current].classList.add('next__slide', direction);
+	sliderImages[current].addEventListener('animationend', (e) => {
+        target = e.target;
+		target.classList.remove('next__slide', direction);
+        target.classList.add('slider__item--active');
+		isEnabled = true;
+	});
+}
+
+const nextSlide = (n) => {
+    hideSlide('leftward');
+	changeCurrentSlide(n + 1);
+    showSlide('from__right');
+    sliderBackground.classList.toggle('slider__blue');
+}
+
+const prevSlide = (n) => {
+    hideSlide('rightwards');
+	changeCurrentSlide(n - 1);
+    showSlide('from__left');
+    sliderBackground.classList.toggle('slider__blue');
+}
+
+arrowLeft.addEventListener('click', () => {
+	if (isEnabled) {
+		nextSlide(current);
+	}
+});
+
+arrowRight.addEventListener('click', () => {
+	if (isEnabled) {
+		prevSlide(current);
+	}
+});
+
+
+
 // Screen iphone off
 
 const iphoneVertical = document.querySelector(".btn-iphone-vertical");
@@ -40,7 +101,10 @@ iphoneHorizontal.addEventListener('click', () => {
     screenoffHorizontal ? offDisplayHorizontal.style.display = "block" : offDisplayHorizontal.style.display = "none";
 });
 
+
+
 //Portfolio tags (active, sort)
+
 const addTagsClickHandler = () => {
     document.querySelector('.navigation-portfolio').addEventListener('click', (e) => {
         e.preventDefault()
@@ -76,6 +140,8 @@ const sortImages = () => {
 
 addTagsClickHandler();
 
+
+
 //Portfolio images selected
 const addSelectedImages = () => {
     document.querySelector('.portfolio').addEventListener('click', (e) => {
@@ -103,6 +169,7 @@ addSelectedImages();
 
 
 //Get a quote
+
 const form = document.querySelector('.form');
 const nameInput = document.querySelector('.input__name');
 const emailInput = document.querySelector('.input__email');
