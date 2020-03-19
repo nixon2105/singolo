@@ -197,11 +197,11 @@ submitForm.addEventListener("click", e => {
     if (nameInput.value && emailInput.value) {
         renderModalWindow.classList.remove("visually-hidden");
         subjectModalWindow.innerText = subjectInput.value
-        ? `Тема: ${subjectInput.value}`
-        : "Без темы";
+        ? `Subject: ${subjectInput.value}`
+        : "No subject";
         descrModalWindow.innerText = textarea.value
-        ? `Описание: ${textarea.value}`
-        : "Без описания";
+        ? `Description: ${textarea.value}`
+        : "No description";
     }
   });
   
