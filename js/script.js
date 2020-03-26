@@ -50,7 +50,7 @@ const showSlide = (direction) => {
         target = e.target;
 		target.classList.remove('next__slide', direction);
         target.classList.add('slider__item--active');
-		isEnabled = true;
+        isEnabled = true;
 	});
 }
 
@@ -170,7 +170,7 @@ addSelectedImages();
 
 //Get a quote
 
-const form = document.querySelector('.form');
+const form = document.querySelector('.form__block');
 const nameInput = document.querySelector('.input__name');
 const emailInput = document.querySelector('.input__email');
 const subjectInput = document.querySelector('.input__subject');

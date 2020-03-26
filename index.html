@@ -11,6 +11,7 @@
 <body>
     <header class="header">
         <div class="wrapper wrapper__header ">
+            <div class="menu-btn""><span></span></div>
             <h1><a href="#" class="header__logo">singolo<sub>*</sub></a></h1>
             <nav class="header__navigation">
                 <ul class="navigation" id="nav">
@@ -25,7 +26,7 @@
     </header>
     <section class="slider slider__red">
         <a class="anch" id="home"></a>
-        <div class="wrapper">
+        <div class="wrapper slider__container">
             <div class="slider__arrow">
                 <img src="assets/img/slider/arrow.png" class="arrow__left arrow" alt="arrow">
                 <img src="assets/img/slider/arrow.png" class="arrow__right arrow" alt="arrow">
@@ -51,36 +52,36 @@
             ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="services">
                 <div class="services__item">
-                    <div class="services__icon"><img src="assets/img/services/pen.svg" alt="pen"></div>
-                    <div class="services__title"><h3>Custom Design</h3></div>
-                    <div class="services__text">Curabitur vestibulum eget mauris quis<br>laoreet. Phasellus in quam laoreet, viverra<br>lacus ut, ultrices velit.</div>
-                </div>
-                <div class="services__item services__item_second-column">
-                    <div class="services__icon services__icon_second-column"><img src="assets/img/services/bulb.svg" alt="bulb"></div>
-                    <div class="services__title"><h3>Inovative Ideas</h3></div>
-                    <div class="services__text">Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus,nec<br> rutrum tellus dolor id lorem.</div>
-                </div>
-                <div class="services__item services__item_third-column">
-                    <div class="services__icon services__icon_third-column"><img src="assets/img/services/heart.svg" alt="heart"></div>
-                    <div class="services__title"><h3>Love Is The Answer</h3></div>
-                    <div class="services__text">Nulla sed nunc et tortor luctus faucibus.<br> Morbi at aliquet turpis, et consequat felis.<br> Quisque condimentum.</div>
+                    <img class="services__icon" src="assets/img/services/pen.svg" alt="pen">
+                    <div class="services__title">Custom Design</div>
+                    <div class="services__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</div>
                 </div>
                 <div class="services__item">
-                    <div class="services__icon"><img src="assets/img/services/phone.svg" alt="phone"></div>
-                    <div class="services__title"><h3>Responsive Layout</h3></div>
-                    <div class="services__text">Sed porttitor placerat rhoncus. In at nunc<br> tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</div>
+                    <img  class="services__icon services__item--two" src="assets/img/services/bulb.svg" alt="bulb">
+                    <div class="services__title">Inovative Ideas</div>
+                    <div class="services__text">Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus,nec rutrum tellus dolor id lorem.</div>
                 </div>
-                <div class="services__item services__item_second-column">
-                    <div class="services__icon services__icon_second-column"><img src="assets/img/services/bubble.svg" alt="bubble"></div>
-                    <div class="services__title"><h3>24 / 7 Support</h3></div>
-                    <div class="services__text">Vivamus vel quam lacinia, tincidunt dui<br> non, vehicula nisi. Nulla a sem erat.Pellen&shy;tesque egestas venenatis lorem .</div>
+                <div class="services__item">
+                    <img  class="services__icon" src="assets/img/services/heart.svg" alt="heart">
+                    <div class="services__title">Love Is The Answer</div>
+                    <div class="services__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</div>
                 </div>
-                <div class="services__item services__item_third-column">
-                    <div class="services__icon services__icon_third-column"><img src="assets/img/services/star.svg" alt="star"></div>
-                    <div class="services__title"><h3>Feel Like A Star</h3></div>
-                    <div class="services__text">Quisque hendrerit purus dapibus, ornare<br> nibh vitae, viverra nibh. Fusce vitae<br> aliquam tellus.</div>
+                <div class="services__item">
+                    <img class="services__icon" src="assets/img/services/phone.svg" alt="phone">
+                    <div class="services__title">Responsive Layout</div>
+                    <div class="services__text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</div>
                 </div>
-            </div>
+                <div class="services__item">
+                    <img class="services__icon services__item--two" src="assets/img/services/bubble.svg" alt="bubble">
+                    <div class="services__title">24 / 7 Support</div>
+                    <div class="services__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat.Pellen&shy;tesque egestas venenatis lorem .</div>
+                </div>
+                <div class="services__item">
+                    <img src="assets/img/services/star.svg" alt="star" class="services__icon">
+                    <div class="services__title">Feel Like A Star</div>
+                    <div class="services__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</div>
+                </div>
+            </div>    
         </div>
     </section>
     <section class="section section_colored">
@@ -144,7 +145,7 @@
                 <div class="employee__item">
                     <img src="assets/img/about/Adam Jensen.jpg" class="employee__photo" alt="Adam Jensen">
                     <h3 class="employee__name">Adam Jensen</h3>
-                    <p class="employee__text">Quisque luctus, quam eget molestie commodo, lacus purus<br> cursus purus, nec rutrum tellus dolor id lorem.</p>
+                    <p class="employee__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="employee__social">
                         <a href="#" class="social__item"><span class="icon-facebook"></span></a>
                         <a href="#" class="social__item"><span class="icon-gplus"></span></a>
@@ -155,7 +156,7 @@
                 <div class="employee__item">
                     <img src="assets/img/about/Desmond Miles.jpg" class="employee__photo" alt="Desmond Miles">
                     <h3 class="employee__name">Desmond Miles</h3>
-                    <p class="employee__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus<br> in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                    <p class="employee__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     <div class="employee__social">
                         <a href="#" class="social__item"><span class="icon-facebook"></span></a>
                         <a href="#" class="social__item"><span class="icon-gplus"></span></a>
@@ -166,7 +167,7 @@
                 <div class="employee__item">
                     <img src="assets/img/about/Scolara Visari.jpg" class="employee__photo" alt="Scolara Visari">
                     <h3 class="employee__name">Scolara Visari</h3>
-                    <p class="employee__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet<br> turpis, et consequat felis. Quisque condimentum.</p>
+                    <p class="employee__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <div class="employee__social">
                         <a href="#" class="social__item"><span class="icon-facebook"></span></a>
                         <a href="#" class="social__item"><span class="icon-gplus"></span></a>
@@ -180,29 +181,29 @@
     <section class="contact">
         <div class="wrapper">
             <a class="anch"  id="contact"></a>
-            <h2 class="contact__title">Get a Quote</h2>
-            <p class="contact__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-            ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="layout-2-column">
-                <div class="contact__form">
-                    <form action="#" method="post" class="form">
-                        <input name="name" type="text" class="input input__name" maxlength="30" pattern="[A-Za-zА-яа-я]{1,30}" placeholder="Name(Required)"  required>
-                        <input name="email" type="email" class="input input__email" placeholder="Email(Required)" required>
-                        <input name="subject" type="text" class="input input__subject" placeholder="Subject" required>
-                        <textarea name="Detail" class="textarea" placeholder="Describe your project in detail..."></textarea>
-                        <input type="submit"  class="input input__submit submit__btn" value="submit" name="subscribe" />
+            <div class="form__header">
+                <h2 class="contact__title">Get a Quote</h2>
+                <p class="contact__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
+                ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            </div>
+            <div class="form__container">
+                    <form action="#" method="post" class="form__block">
+                        <div class="form__input">
+                            <input name="name" type="text" class="input__name" maxlength="30" pattern="[A-Za-zА-яа-я]{1,30}" placeholder="Name(Required)"  required>
+                            <input name="email" type="email" class="input__email" placeholder="Email(Required)" required>
+                            <input name="subject" type="text" class="input__subject" placeholder="Subject" required>
+                            <textarea name="Detail" class="textarea" placeholder="Describe your project in detail..."></textarea>
+                        </div>
+                        <button type="submit"  class="input__submit" name="subscribe">submit</button>
                     </form>
-                </div>
                 <div class="contact__info">
                     <h5 class="contact__subtitle">Contact information</h5>
-                    <p class="contact__content">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat<br> libero. Nulla sed nunc et tortor luctus faucibus. Morbi at<br> aliquet turpis, et consequat felis.</p>
-                    <div>
+                    <p class="contact__content">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                        <ul class="contact-navigation">
                            <li class="contact-navigation__item"><a href="#" class="contact-navigation__link icon-location">Elm St. 14/05 Lost City</a></li>
                            <li class="contact-navigation__item"><a href="tel:03528 331 86 35" class="contact-navigation__link icon-phone">03528 331 86 35</a></li>
                            <li class="contact-navigation__item"><a href="mailto:info@singolo.com" class="contact-navigation__link icon-mail">info@singolo.com</a></li>
-                       </ul> 
-                    </div>
+                       </ul>  
                 </div>
             </div>
         </div>
@@ -211,6 +212,7 @@
         <div class="wrapper">
             <div class="footer__info">
                 <p class="footer__copyright">© Copyright 2013 · by PSDchat.com</p>
+                <p class="footer__copyright footer__copyright--tablet">© Copyright 2013</p>
                 <div class="footer__social">
                     <a href="#" class="footer__item"><span class="icon-facebook"></span></a>
                     <a href="#" class="footer__item"><span class="icon-gplus"></span></a>
