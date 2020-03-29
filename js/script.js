@@ -7,18 +7,41 @@ navigation.addEventListener('click', (e) => {
 });
 
 //smooth scroll
-const anchors = document.querySelectorAll('a.navigation__link')
+// const anchors = document.querySelectorAll('a.navigation__link')
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', (e) => {
-    e.preventDefault()
-    const blockID = anchor.getAttribute('href');
-    document.querySelector(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-};
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     const blockID = anchor.getAttribute('href');
+//     document.querySelector(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     });
+//   });
+// };
+
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const currentPosition = window.scrollY;
+    const header = document.querySelector('header')
+    const sections = document.querySelectorAll('body > *');
+    const navbar = document.querySelectorAll('#nav li a');
+
+    sections.forEach((element) => {
+        if (element.hasAttribute('id')) {
+            if (element.offsetTop - header.clientHeight <= currentPosition && (element.offsetTop + element.clientHeight) > currentPosition) {
+                navbar.forEach((link) => {
+                    link.classList.remove('active');
+                    if (element.getAttribute('id') === link.getAttribute('href').substring(1)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+    })
+}
 
 
 //slider
@@ -254,7 +277,7 @@ submitForm.addEventListener("click", e => {
           overlay.classList.remove('active');
           logo.classList.remove('active');
       } else {
-          event.target.stopPropagation();
+        //   event.target.stopPropagation();
       }
   })
 
