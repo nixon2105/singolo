@@ -218,3 +218,43 @@ submitForm.addEventListener("click", e => {
     emailInput.classList.remove("invalid");
   });
 
+  //burger-menu
+
+  const burger = document.querySelector('.menu-btn');
+  const logo = document.querySelector('.mobile__logo');
+  const nav = document.querySelector('.header__navigation');
+  const overlay = document.querySelector('.overlay__mobile');
+  let countClicks = 0;
+
+
+  burger.addEventListener('click', (event) => {
+      countClicks = (countClicks + 1) % 2;
+      if (countClicks === 1) {
+          burger.classList.add('active');
+          overlay.classList.add('active');
+          nav.classList.add('show__mobile-mnu');
+          logo.classList.add('active');
+
+      } else {
+          burger.classList.remove('active');
+          nav.classList.remove('show__mobile-mnu');
+          overlay.classList.remove('active');
+          logo.classList.remove('active');
+
+      }
+  });
+
+  const mobileMenu = document.querySelector('#nav');
+
+  mobileMenu.addEventListener('click', (event) => {
+      if (event.target.closest('ul li a')) {
+          countClicks = (countClicks + 1) % 2;
+          nav.classList.remove('show__mobile-mnu');
+          burger.classList.remove('active');
+          overlay.classList.remove('active');
+          logo.classList.remove('active');
+      } else {
+          event.target.stopPropagation();
+      }
+  })
+

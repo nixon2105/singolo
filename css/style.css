@@ -74,6 +74,10 @@ a {
   height: 20px;
 }
 
+.mobile__logo {
+  display: none;
+}
+
 .menu-btn span {
   position: absolute;
   top: calc(50% - 1.2px);
@@ -1135,14 +1139,88 @@ sub {
 
 @media only screen and (max-width: 767px) {
   .menu-btn {
+    z-index: 6;
+
     display: block;
   }
-  .header {
-    height: 71px;
+
+
+  .menu-btn.active {
+    z-index: 5;
+
+    transform: rotate(90deg);
   }
 
   .header__navigation {
     display: none;
+  }
+
+  .mobile__logo.active {
+    position: fixed;
+    top: 24px;
+    left: 71px;
+    z-index: 7;
+
+    display: block;
+
+    font-size: 20px;
+    font-family: "Lato", Verdana, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .overlay__mobile.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    width: calc(100% - 238px);
+    height: 100%;
+
+    background: #2d303a;
+    opacity: 0.6;
+  }
+
+  .show__mobile-mnu {
+    position: fixed;
+    top: -9px;
+    left: 0;
+    z-index: 4;
+
+    display: block;
+    width: 245px;
+    height: 100vh;
+
+    background: #2d303a;
+    box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .show__mobile-mnu ul {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 263px;
+    margin-top: 232px;
+    padding-left: 71px;
+  }
+
+  .header__navigation ul li a {
+    font-size: 24px;
+  }
+
+  .navigation__item {
+    margin-left: 0;
+  }
+
+  .navigation__item:after {
+    display: none;
+  }
+  .navigation__item:nth-child(4) {
+    margin-left: 0;
+  }
+  .header {
+    height: 71px;
   }
 
   h1 {
