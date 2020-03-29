@@ -1432,6 +1432,15 @@ sub {
     max-width: 300px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .portfolio {
+    height: calc((100vw - 95px)/2*4/1.1765 + 56px);
+  }
+  .about {
+    margin-top: 0;
+  }
+}
 @media only screen and (max-width: 374px) {
   .services {
     padding-right: 0;
